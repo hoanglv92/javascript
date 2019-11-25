@@ -5,12 +5,16 @@ function abc(){
     }else{
         document.getElementById("demo").innerHTML = "Bạn đã bấm nút hủy";
     }
+
     let b= prompt("nhập vào số b:");
     if(b!=null){
         document.getElementById("demo").innerHTML ="bạn đã nhập số b: "+b;
     }else {
         document.getElementById("demo").innerHTML= "bạn đã bấm hủy";
     }
+    document.write("bạn nhập số a là:" + a +"<br/>"  );
+
+    document.write("bạn nhập số b là:" + b  );
     let c=a%b;
     if(c==0){
         alert("b là bội số của a");
@@ -18,5 +22,6 @@ function abc(){
     }else {
         alert("b không là bội số của a");
     }
+
 
 }
