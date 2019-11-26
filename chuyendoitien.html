@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập chuyển đổi tiên tệ</title>
+    <script src="chuyendoitiente.js"></script>
+</head>
+<body>
+<table border="0" width="70">
+    <tr>
+        <th>Amount</th>
+        <th>from Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+        <form>
+            <input id="nhaptien1" type="text" value="1"/>
+        </form>
+        </td>
+        <td>
+
+                <select id="chuyentien1">
+                    <option value="1">VND</option>
+                    <option value="2">USD</option>
+                </select>
+
+        </td>
+        <td>
+            <select id="chuyentien2">
+                <option value="1">USD</option>
+                <option value="2">VND</option>
+            </select>
+        </td>
+        <td>
+
+                <button type="button" name="chuyendoi" onclick="chuyendoi()">chuyendoi</button>
+
+        </td>
+    </tr>
+</table> <br>
+<div id="hienthi"></div>
+
+
+</body>
+</html>

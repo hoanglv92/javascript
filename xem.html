@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+​
+tien: <input type="text" id="tien_id" >
+​
+<br><button onclick="chuyenDoi()"> Chuyen Doi</button>
+<div id="output_id"> </div>
+​
+<br>
+<select id="chon_tinh_thanh_id">
+    <option value="1">Ha Noi</option>
+    <option value="2">Sai Gon</option>
+</select>
+ <br><button onclick="hienthi()"> Hien thi Select Value</button>
+<div id="output2"></div>
+​
+<script>
+    //function print(input) {
+     //   document.getElementById("output2").innerHTML += input;
+ //   }
+  //  let a = 4;
+  //  let kq = typeof (a);
+  //  print("kieu du lieu cua bien a:"+kq);
+​
+    //function hienthi(){
+        //1. chon select:
+    //    let selectBox = document.getElementById("chon_tinh_thanh_id");
+       // document.getElementById("output2").innerHTML = selectBox.value;
+    }
+​
+    function chuyenDoi() {
+        //1. chi dinh the (tag) can truy cap (select)
+        let textTien = document.getElementById("tien_id");
+        //2. lay giatri cua the (value)
+        let ketqua = textTien.value *2;
+​
+        //3. hien thi gia tri sau khi nhan
+        document.getElementById("output_id").innerHTML = ketqua;
+    }
+​
+</script>
+</body>
+</html>
