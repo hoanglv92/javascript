@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số BMI cân nặng của cơ thể</title>
+</head>
+<body>
+<button type="button" onclick="nhapDL()">nhấn để tính bmi</button>
+<div id="hienthi"></div>
+<script>
+    function nhapDL(){
+    let klg=prompt("hãy nhập số klg của bạn" );
+    let cao=prompt("hãy nhập chiều cao của bạn");
+    let bmi;
+    bmi=klg/(cao*cao);
+    if (bmi < 18){
+        alert("bạn bị gầy");
+        document.write("bạn bị gầy");
+    }
+    else if (bmi < 25.0){
+        alert("bạn bình thường");
+        document.write("bình thường");
+    }
+    else if (bmi < 30.0){
+        alert("bạn hơi béo");
+        document.write("bạn hơi béo");
+    } else
+        document.write(" Bạn Bị Mập");
+}
+
+</script>
+
+</body>
+</html>
