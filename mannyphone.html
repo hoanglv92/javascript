@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<h1>Hãy nhập vào số phút gọi</h1>
+<input id="nhap" type="text" value="">
+<button type="button" onclick="tinhtoan()" >Tính số tiền phải trả</button> <br>
+<p>Số tiền bạn phải trả :</p> <br>
+<div id="hienthi"></div>
+<script>
+    function tinhtoan() {
+        let b;
+        let a=document.getElementById("nhap").value;
+        a=parseInt(a);
+        if (a>100){
+            b=a*2000;
+        }else if (a>50){
+            b=a*1000;
+        }else {
+            b=a*500;
+        }
+        document.getElementById("hienthi").innerHTML=b+" Nghìn đồng";
+    }
+</script>
+</body>
+</html>

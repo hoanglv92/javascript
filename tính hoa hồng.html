@@ -5,7 +5,33 @@
     <title>Tính hoa hồng nhận được</title>
 </head>
 <body>
-
-
+<h1>Hãy nhập doanh số bán hàng</h1>
+<input type="text" id="doanhso" value="">
+<button type="button" onclick="tinhtoan()" id="tinh">Tính hoa hồng nhận được</button> <br>
+<p>Số hoa hồng bạn nhận được: </p> <br>
+<div id="sopt"></div> <br>
+<p> số tiền bạn nhận được là :</p> <br>
+<div id="hienthi"></div>
+<script>
+    function tinhtoan() {
+        let a= document.getElementById("doanhso").value;
+        let b;
+        a=parseInt(a);
+        if (a>1000000000){
+            b=(a/100)*20;
+            document.getElementById("sopt").innerHTML=20+"%";
+        }else if(a>500000000){
+            b=(a/100)*10;
+            document.getElementById("sopt").innerHTML=10+"%";
+        }else if (a>200000000){
+            b=(a/100)*5;
+            document.getElementById("sopt").innerHTML=5+"%";
+        }else {
+            b=(a/100)*2;
+            document.getElementById("sopt").innerHTML=2+"%";
+        }
+        document.getElementById("hienthi").innerHTML=b;
+    }
+</script>
 </body>
 </html>
