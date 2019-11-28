@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giá Điện</title>
+</head>
+<body>
+<h1>Nhập vào số điện của bạn để tính ra số tiền:</h1>
+<input id="sodien" type="text" value="">
+<button type="button" onclick="tinhtien()">Nhấn để tính số tiền phải nộp</button> <br>
+<p>Số tiền điện bạn phải đóng là : </p>
+<div id="hienthi"></div>
+<script>
+    function tinhtien() {
+        let a= document.getElementById("sodien").value;
+        a=parseInt(a);
+        if (a>200){
+            a=a*4000;
+        }else if (a>100){
+            a=a*2000;
+        }else if (a>50){
+            a=a*1000;
+        }else {
+            a=a*500;
+        }
+        document.getElementById("hienthi").innerHTML=a;
+    }
+</script>
+</body>
+</html>

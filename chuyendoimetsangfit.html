@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển met sang Fit</title>
+</head>
+<body>
+<h1>Hãy nhập vào số met</h1>
+<input id="nhapmet" type="text" value="">
+<button type="button" onclick="tinhtoan()" >Nhấn để chuyển sang fit</button> <br>
+<p>Số fit :</p> <br>
+<div id="hienthi"></div>
+<script>
+    function tinhtoan() {
+        let ft;
+        let m=document.getElementById("nhapmet").value;
+        m=parseInt(m);
+        ft=m*3.2808;
+        document.getElementById("hienthi").innerHTML=ft;
+    }
+</script>
+</body>
+</html>

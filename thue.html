@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<h1>Nhập vào số thu nhập một tháng của bạn để tính thuế thu nhập cá nhân bạn phải đóng</h1>
+<input type="text" value="" id="thunhap">
+<button type="button" onclick="tinhtien()">Click</button> <br>
+<p>số tiền thuế bạn phải đóng là: </p>
+<div id="display"></div>
+
+<script>
+    function tinhtien() {
+        let b;
+        let a=document.getElementById("thunhap").value;
+        a=parseInt(a);
+        if (a>100000000){
+            b=a/100*20;
+            document.getElementById("display").innerHTML=b + "đồng là 20%";
+        }else if (a>50000000){
+            b=a/100*10;
+            document.getElementById("display").innerHTML=b + "đồng là 10%";
+        }else if (a>15000000){
+            b=a/100*5;
+            document.getElementById("display").innerHTML=b + "đồng là 5%";
+        }else {
+            b=0;
+            document.getElementById("display").innerHTML=b +"đồng là0%";
+        }
+    }
+</script>
+</body>
+</html>
