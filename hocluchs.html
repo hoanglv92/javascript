@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Học lực của học sinh</title>
+</head>
+<body>
+<h1> Nhập vào các số điểm để tính học lực</h1>
+<table border="1">
+    <tr>
+        <td>Số thứ tự</td>
+        <td>Họ và tên</td>
+        <td>Điểm kiếm tra</td>
+        <td>Điểm thi hết môn</td>
+        <td>Điểm thi học kỳ</td>
+        <td>Điểm trung bình </td>
+        <td>Học Lực</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><input type="text" value="" name="name"/></td>
+        <td><input type="text" value="" name="kt" id="dkt"/></td>
+        <td><input type="text" value="" name="hm" id="dhm"/></td>
+        <td><input type="text" value="" name="hk" id="dhk"/></td>
+        <td><input type="text" value="" name="tb" id="dtb"/></td>
+        <td><input type="text" value="" name="hocluc" id="hl"/></td>
+        <td><button type="button" onclick="tinhtoan()">Tính học lực</button> </td>
+    </tr>
+</table>
+<script>
+    function tinhtoan() {
+        let a=document.getElementById("dkt").value;
+        console.log(a)
+        let b=document.getElementById("dhm").value;
+        console.log(b)
+        let c=document.getElementById("dhk").value;
+        console.log(c);
+         a=parseInt(a);
+         b=parseInt(b);
+         c=parseInt(c);
+        let e=(a+b+c)/3;
+        console.log(e);
+        document.getElementById("dtb").value = e;
+        if (e>=8) {
+            document.getElementById("hl").value = "giỏi";
+        }else if (e>=6.5) {
+            document.getElementById("hl").value = "khá";
+        } else  if (e>=5){
+            document.getElementById("hl").value="trung bình";
+        }else {
+            document.getElementById("hl").valua="kém";
+        }
+
+    }
+
+</script>
+</body>
+</html>

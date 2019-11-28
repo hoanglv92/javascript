@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số bất kỳ xét lớn hơn 0 hoặc nhỏ hơn</title>
+</head>
+<body>
+<button onclick="tinhtoan()">viết một số bất kỳ để kiểm tra</button>
+<script>
+    function tinhtoan() {
+        let number=prompt("hãy nhập vào một số bất kỳ");
+        number=parseInt(number);
+        if (number=0){
+            alert("number"+ "bằng 0" );
+        }else if (number>0){
+            alert("number"+ "là số lớn hơn 0");
+        }else {
+            alert("number"+ "là số nhỏ hơn 0");
+        }
+
+    }
+</script>
+
+</body>
+</html>

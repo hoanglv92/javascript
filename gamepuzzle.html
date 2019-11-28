@@ -16,6 +16,7 @@
     let displaythree=document.getElementById("img3").src;
     let displayfor=document.getElementById("img4").src;
     let displayfive=document.getElementById("img5").src;
+    let ketqua;
     function chuyendoi1() {
         if (displayone == "funny-cat1_part1x1.jpg") {
             displayone = document.getElementById("img1").src = "monkey_part1x1.jpg";
@@ -65,6 +66,12 @@
             displayfive=document.getElementById("img5").src ="funny-cat1_part5x1.jpg";
         }
 
+    }
+    function message() {
+        if(displayone == "funny-cat1_part1x1.jpg"&&displaytwo=="funny-cat1_park2x1"&&displaythree == "funny-cat1_part3x1.jpg"&&displayfor == "funny-cat1_part4x1.jpg" && displayfive == "funny-cat1_part5x1.jpg"){
+            alert("you win")
+
+        }
     }
 
 

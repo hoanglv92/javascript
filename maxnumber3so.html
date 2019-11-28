@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số lớn nhất của 3 số</title>
+</head>
+<body>
+<button onclick="dulieu()" id="nhan" value="">nhấn vào đây và nhập 3 số ngẫu nhiên để tìm ra số lớn nhất</button>
+<script>
+    function dulieu() {
+        let a = parseInt(prompt("hãy nhập số đầu tiên"));
+        let b = parseInt(prompt("hãy nhập số thứ 2"));
+        let c = parseInt(prompt("hãy nhập số thứ 3"));
+        let max = a;
+        if (max > b ) {
+            if(max>c){
+               max=a;
+            }else {
+                max=c;
+            }
+
+        }else if (b>c){
+            max=b;
+        } else {
+            max=c;
+        }
+        alert("số lớn nhât là :" +max);
+    }
+</script>
+</body>
+</html>

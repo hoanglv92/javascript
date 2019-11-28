@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÍnh số tuổi có đủ để học lớp 10</title>
+</head>
+<body>
+<button type="button" id="nhanvao" onclick="tinhtoan()">nhan vào đây để tính số tuổi vào lớp 10</button>
+<script>
+    function tinhtoan() {
+        let age=prompt("nhập vào số tuổi của bạn");
+        age=parseInt(age);
+        if(age>16){
+            alert("bạn đủ tuổi học lớp 10 bới vì bạn đã qua 16 tuổi");
+        }else {
+            alert("bạn chưa đủ tuổi học lớp 10 vì bạn chưa đủ 16 tuổi");
+        }
+
+    }
+</script>
+</body>
+</html>
