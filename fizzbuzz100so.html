@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>100 số đầu tiên</title>
+</head>
+<body>
+<h1>100 số từ 1-->100 , các số chia hết cho 3 hiển thị là fizz , các số chia hết cho 5 là buzz . Đồng thòi chia hết cho cả 2 là fizzbuzz:</h1>
+<script>
+    let hienthi='';
+
+    for (let i=1;i<=100;i++){
+       hienthi=i+"<br>";
+       if (i%3==0){
+           hienthi="fizz"+"<br>";
+       }
+       if (i%5==0){
+           hienthi="buzz"+"<br>";
+       }
+       if (i%3==0&&i%5==0){
+           hienthi="fizzbuzz"+"<br>";
+       }
+        document.write(hienthi);
+    }
+
+</script>
+
+</body>
+</html>

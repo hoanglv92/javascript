@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số trong dãy fibonacia đầu tiên</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+
+    let num = prompt("hãy nhập độ dài chuỗi fibonaci");
+    num=parseInt(num);
+    let tong=0;
+
+
+        let a = 1, b = 0, temp;
+
+        while (num > 0){
+            temp = a;
+            a = a + b;
+            b = temp;
+            tong+=b;
+            num--;
+            document.write( b+ "<br>");
+        }
+
+        document.write("tổng 20 số đầu tiền là :" +tong+"<br>");
+    for (let b=1; b<10; b++) {
+        if (b % 5 == 0) {
+            document.write("số đàu tiên trong dãy chia hết cho 5 là :" + b);
+            console.log(b);
+        }
+
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
