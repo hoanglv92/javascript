@@ -7,18 +7,24 @@
 <body>
 
 <script>
-  let so=prompt("hãy nhập vào một số : ");
-  so=parseInt(so);
-  function tinhgiaithua(N) {
-      let sogt;
-      for (let i=1;i<N;i++){
-          sogt=N*i;
-          i++;
-      }
-  }
-  function f() {
-      
-  }
+    let so = prompt("hãy nhập vào một số : ");
+    so = parseInt(so);
+
+
+    function tinhgiaithua(N) {
+        let sgt = 1;
+        for (let i = 1; i < so; i++) {
+            sgt = sgt * i;
+        }
+        console.log(sgt);
+        document.write(sgt);
+
+
+    }
+
+    tinhgiaithua()
+
+
 
 
 
