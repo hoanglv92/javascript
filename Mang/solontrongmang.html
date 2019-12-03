@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Số lớn nhất trong mảng</title>
+</head>
+<body>
+<p>Mảng x=[2,5,3,6,8,1,3,9]</p>
+<button type="button" onclick="numbermax()">click để tìm số lớn nhất trong mảng</button><br>
+<p id="displaymax"></p>
+<script>
+
+    let x=[2,5,3,6,8,1,3,9];
+    let max=x[0];
+    function numbermax() {
+    for (let i=1;i<x.length;i++){
+        if (max<x[i]){
+            max=x[i];
+        }else {
+            x[0]=max;
+        }
+    }document.getElementById("displaymax").innerHTML=max;
+
+    }
+</script>
+
+</body>
+</html>
