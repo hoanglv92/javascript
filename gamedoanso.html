@@ -15,7 +15,7 @@
     fistnum=parseInt(fistnum);
     seconnum=parseInt(seconnum);
     doanso=parseInt(doanso);
-    let sodung= Math.floor((Math.random()*seconnum)+fistnum);
+    let sodung= Math.floor((Math.random()*(seconnum-fistnum)+fistnum));
    if (doanso==sodung){
        alert("bạn đã đoán đúng số ");
    }else  {
