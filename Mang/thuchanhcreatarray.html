@@ -15,12 +15,14 @@
     function thempt() {
         let lay = document.getElementById("phantumoi").value;
         mang.push(lay);
-        console.log(lay);
+        document.getElementById("phantumoi").value="";
     }
     function hienthipt() {
+        let e = "<hr/>";
         for (let i=0;i<mang.length;i++){
-            document.getElementById("hienthi").innerHTML+="mang "+" "+i+"="+mang[i]+"</br>";
+            e+="mang "+" "+i+"="+mang[i]+"</br>";
         }
+        document.getElementById("hienthi").innerHTML=e;
     }
 
 </script>
