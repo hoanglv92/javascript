@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>làm từ điển anh việt đơn giản</title>
+</head>
+<body>
+<h3>Nhập từ tiếng anh để dịch sang tiếng việt</h3>
+<input type="text" id="dulieu" value="">
+<button type="button" onclick="timkiem()">Nhấn để dịch sang tiếng việt</button> <br>
+<p id="display1"></p>
+<script>
+
+    let english=["hello","goodbye","apple","drink"];
+    let vietnam=["xin chào","tạm biệt","quả táo","nước uống"];
+    function timkiem() {
+        let x=document.getElementById("dulieu").value;
+    for (let i=0;i<english.length;i++){
+        if (x==english[i]){
+            console.log(x);
+            for (let y=0;y<vietnam.length;y++){
+                if (i==y){
+                    console.log(x);
+                    document.getElementById("display1").innerHTML=vietnam[y];
+                    console.log(vietnam[y]);
+                }
+            }
+        }
+
+
+    }
+        document.getElementById("display1").value="không tìm thấy kết quả";
+    }
+
+
+
+</script>
+</body>
+</html>
