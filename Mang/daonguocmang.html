@@ -5,24 +5,21 @@
     <title>Đảo ngược mảng</title>
 </head>
 <body>
-<p>Mảng ban đầu: mang=(1,2,3,4,5,6,7,8)</p> <br>
-<button id="nhan" type="button" onclick="thaydoi()">Nhấn để đảo ngược mảng</button>
-<div id="hienthi"></div>
+<button type="button" onclick="daonguocmang()">click để đảo ngược mảng</button>
 <script>
-    let mang=new Array(1,2,3,4,5,6,7,8);
-    let dau = 0;
-    let cuoi = mang.length - 1;
-    function thaydoi() {
-    while (dau < cuoi) {
-        let b = mang[dau];
-        mang[dau] = mang[cuoi];
-        mang[cuoi] = b;
-        dau++;
-        cuoi--;
+    function daonguocmang() {
+        let mang = new Array(1, 2, 3, 4, 5, 6, 7);
+        let first = 0;
+        let last = mang.length-1;
+        let bienfirst;
+        while (first < last) {
+            bienfirst=mang[first];
+            mang[first] = mang[last];
+            mang[last]=bienfirst;
+            first++;
+            last--;
+        }document.write(mang);
     }
-    document.getElementById("hienthi").innerHTML="mang = ("+mang+")";
-    }
-
 </script>
 </body>
 </html>
