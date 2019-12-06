@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <title>Thay - thành _</title>
@@ -8,13 +8,17 @@
 <h1 id="hienthi"></h1>
 <script>
     let mang="le-van-hoang-dep-zai-:D";
-    for (let i=0; i<mang.length;i++){
-        if (mang[i]=="-"){
-            mang[i]= "_";
-            console.log(mang[i]);
-        }
+    function thaythe() {
+   for (let y=0;y<mang.length;y++){
+       if (mang[y]=="-"){
+           mang[y]="_";
+       }
+   }
+   document.getElementById("hienthi").innerHTML=mang;
     }
-    document.getElementById("hienthi").innerHTML=mang;
+
+    thaythe()
+
 </script>
 </body>
 </html>

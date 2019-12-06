@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quanr lý sản phẩm</title>
+</head>
+<body>
+<h3>Thêm một sản phẩm mới</h3>
+<input id="addnew" type="text" value="">
+<button type="button" onclick="addSP()">Add</button> <br><br>
+<b>Danh sách các sản phẩm:</b><br>
+<p id="display"></p>
+
+<script>
+let danhsach=[
+    ["nokia","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
+    ["samsung","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
+    ["sony","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
+    ["oppo","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
+    ["apple","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
+    ["huaweil","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ]
+];
+function hienthidanhsachsp() {
+    let bang="<table border=1 width='50%'>";
+    for (let i=0;i<danhsach.length;i++){
+        bang+="<tr>";
+        for (let j=0;j<danhsach[i].length;j++){
+            bang+="<td>"+danhsach[i][j]+"</td>";
+        }bang+="</tr>";
+    }bang+="</table>";
+    document.getElementById("display").innerHTML=bang;
+}
+function addSP(){
+    let themsp=document.getElementById("addnew").value;
+    danhsach.push(themsp);
+    return danhsach;
+}
+function editsp(){
+
+}
+
+
+hienthidanhsachsp()
+</script>
+</body>
+</html>

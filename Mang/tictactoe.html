@@ -2,70 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tic tac</title>
+    <title>Title</title>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            font-size: 30px;
+            text-align: center;
+        }
+        ​
+        td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
-<h3>Caro Game Simple</h3>
-<p id="carogame" />
+<script type="text/javascript">
+    let status = "x";
+​
+    function drawBoard(N) {
+        let string = "<table>";
+        for (let i = 0; i < N; i++) {
+            string += "<tr>";
+            for (let j = 0; j < N; j++) {
+                string += "<td id='id" + i + j + "' onclick='displayXO(this.id,"+i+","+j+");'></td>";
+            }
+            string += "</tr>";
+        }
+        string += "</table>";
+        document.write(string);
+    }
+    function displayXO(idOfCell,i,j) {
+        if(document.getElementById(idOfCell).innerHTML=="")
+            document.getElementById(idOfCell).innerHTML = status;
+        if (status == "x") {
+            status = "o";
+        } else {
+            status = "x";
+        }
+        checkWin(i,j);
+    }
+    function checkWin(xPosition,yPosition) {
+    ​
+    count = 1;
+        i = xPosition;
+        j = yPosition;
+        let value = document.getElementById("id" + i + j).innerHTML;
+        //Kiem tra tren hang i
+        while (document.getElementById("id" + i + (j + 1)).innerHTML == value) {
+            count++;
+            if (count == 5) {
+                alert("Winner!!!!");
+                return true;
+            }
+            j++;
+        }
+        i = xPosition;
+        j = yPosition;
+        while (document.getElementById("id" + i + (j - 1)).innerHTML == value) {
+            count++;
+            if (count == 5) {
+                alert("Winner!!!!");
+                return true;
+            }
+            j--;
+        }
+        //Kiem tra theo cot j
+        count = 1;
+        i = xPosition;
+        j = yPosition;
+        while (document.getElementById("id" + (i + 1) + j).innerHTML == value) {
+            count++;
+            alert(count);
+            if (count == 5) {
+                alert("Winner!!!!");
+                return true;
+            }
+            i++;
+        }
+        i = xPosition;
+        j = yPosition;
+        while (document.getElementById("id" + (i - 1) + j).innerHTML == value) {
+            count++;
+            alert(count);
+            if (count == 5) {
+                alert("Winner!!!!");
+                return true;
+            }
+            i--;
+        }
+        //Kiem tra theo duong Cheo phai
+        count = 1;
+        i = xPosition;
+        j = yPosition;
+        while (document.getElementById("id" + (i - 1) + (j + 1)).innerHTML == value) {
+            alert(document.getElementById("id" + (i - 1) + (j + 1)).innerHTML);
+            count++;
+            if (count == 5) {
+                alert("Winner!!!!");
+                return true;
+            }
+            i--;
+            j++;
+        }
+        i = xPosition;
+        j = yPosition;
+        while (document.getElementById("id" + (i + 1) + (j - 1)).innerHTML == value) {
+            count++;
+            if (count == 5) {
+                alert("Winner!!!!");
+                return true;
+            }
+            i++;
+            j--;
+        }
 
-<script>
-
-   let mang=new Array();
-   let bang='';
-   function taobang(N,M){
-       bang="<table border='2' width='70%' >";
-   for ( let i=0; i<N;i++){
-       mang[i]=[];
-       bang+="<tr>";
-       for (let j=0; j<M;j++){
-        mang[i][j]="*";
-        bang+="<td align='center' onclick=\"insert('"+i+"','"+j+"')\">"+mang[i][j]+"</td>";
-       }
-       bang+="</tr>";
-   }
-         bang+="</table>";
-        document.getElementById("carogame").innerHTML=bang;
-       }
-
-       function velaibang(N,M){
-           bang="<table border='2' width='70%' >";
-           for ( let i=0; i<N;i++){
-               bang+="<tr>";
-               for (let j=0; j<M;j++){
-                   bang+="<td align='center' onclick=\"insert('"+i+"','"+j+"')\">"+mang[i][j]+"</td>";
-               }
-               bang+="</tr>";
-           }
-           bang+="</table>";
-           document.getElementById("carogame").innerHTML=bang;
-       }
-   let cout =true;
-   function insert(x,y) {
-       cout =!cout;
-       if (cout) {
-           mang[x][y] = "X";
-       } else  {
-           mang[x][y] = "O";
-       }
-       if (mang[x][y]=="x"){
-           let dem=1;
-
-       }
-
-
-
-
-
-       velaibang  (20,20);
-   }
-
-
-
-
-
-
-
-       taobang(20,20)
+//Tu viet cheo trai
+    ​
+    }
+    drawBoard(9);
+​
 </script>
+​
 </body>
 </html>
+Collapse
+
+
+
+
