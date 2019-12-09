@@ -9,38 +9,39 @@
 <input id="addnew" type="text" value="">
 <button type="button" onclick="addSP()">Add</button> <br><br>
 <b>Danh sách các sản phẩm:</b><br>
-<p id="display"></p>
-
+<div id="hienthi"></div>
 <script>
-let danhsach=[
-    ["nokia","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
-    ["samsung","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
-    ["sony","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
-    ["oppo","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
-    ["apple","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ],
-    ["huaweil","<button type='button' onclick='editsp()'>edit</button>","<button type='button'  onclick='xoasp()'>delete</button>" ]
-];
-function hienthidanhsachsp() {
-    let bang="<table border=1 width='50%'>";
-    for (let i=0;i<danhsach.length;i++){
-        bang+="<tr>";
-        for (let j=0;j<danhsach[i].length;j++){
-            bang+="<td>"+danhsach[i][j]+"</td>";
-        }bang+="</tr>";
-    }bang+="</table>";
-    document.getElementById("display").innerHTML=bang;
-}
-function addSP(){
-    let themsp=document.getElementById("addnew").value;
-    danhsach.push(themsp);
-    return danhsach;
-}
-function editsp(){
+    let mang=[];
+    function showSP() {
+        bang="<table width='50%' border='1'>";
+        for (let i=0;i<mang.length;i++){
+            bang+="<tr>";
+            bang+="<td>"+mang[i]+"</td>";
+            bang+="<td>"+"<button  onclick='editName("+i+")' type='button'>edit</button> "+"</td>";
+            bang+="<td>"+"<button onclick='deleSP("+i+")' type='button'>delete</button> "+"</td>";
+            bang+="</tr>";
+        }
+        bang+="</table>";
+        document.getElementById("hienthi").innerHTML=bang;
+    }
 
-}
+   function addSP() {
+       let nameSP=document.getElementById("addnew").value;
+       mang.push(nameSP);
+       showSP();
+   }
+   
+   function editName(i) {
+       let nameNew=prompt("Nhập lại tên mới");
+       mang[i]=nameNew;
+       showSP();
+   }
+   function deleSP(i) {
+        if (confirm("bạn chắc muốn xóa?"));
+     mang.splice(i,1);
+      showSP();
+   }
 
-
-hienthidanhsachsp()
 </script>
 </body>
 </html>

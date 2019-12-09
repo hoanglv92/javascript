@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tang một giá trị lên một sau khi gọi hàm</title>
+</head>
+<body>
+<input type="text" value="" id="so">
+<button onclick="ketqua()">click</button> <br>
+<p id="hienthi"></p>
+<script>
+    function ketqua() {
+       let a= document.getElementById("so").value;
+       a=parseInt(a);
+       a=a+1;
+       document.getElementById("hienthi").innerHTML=a;
+    }
+
+</script>
+</body>
+</html>

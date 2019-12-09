@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sanh 2 tham số nhập vào</title>
+</head>
+<body>
+<button onclick="sosanh(a,b)">so sánh 2 số mới nhập</button>
+<script>
+    let a=prompt("hãy nhập vào một số :");
+    a=parseInt(a);
+    let b=prompt("hãy nhập vào một số:");
+    b=parseInt(b);
+    function sosanh(a,b) {
+        if (a>b){
+            alert("số đầu bạn nhập là số lớn hơn ")
+        }else {
+            let tong=a+b;
+            alert("tổng của 2 số là :" +tong);
+        }
+    }
+</script>
+</body>
+</html>
