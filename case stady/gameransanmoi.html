@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        canvas {
+
+            border: 1px solid #d3d3d3;
+
+            background-color: black;
+
+        }
+
+    </style>
+</head>
+<body onload="startGame()()">
+
+<script>
+
+
+    function startGame() {
+
+        myGameArea.start();
+
+    }
+
+
+    var myGameArea = {
+
+        canvas : document.createElement("canvas"),
+
+        start : function() {
+
+            this.canvas.width = 400;
+
+            this.canvas.height = 600;
+
+            this.context = this.canvas.getContext("2d");
+
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+
+        }
+
+    }
+
+    function car(width, height, x, y) {
+        this.width = width;
+
+        this.height = height;
+
+        this.x = x;
+
+        this.y = y;
+
+
+
+
+    }
+
+
+
+
+</script>
+</body>
+</html>
